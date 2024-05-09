@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>SB Unlocked</title>
+        <style>
+            * :not("title") {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            * {
+                font-family: "Arial";
+            }
+            button {
+                padding: 5px;
+                width: 640px;
+            }
+            body {
+                background-color: rgb(255,255,50);
+            }
+            .URLClass {
+                width: 640px;
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to SchoolBoard Unlocked!</h1>
+        <h2>To get started, type a YouTube URL in the box below, or use the pre-loaded Google Search Engine!</h2>
+        <iframe src="https://www.google.com/webhp?igu=1&gws_rd=ssl" id="frame" width="640" height="480"><h1>Sorry, your browser dosen't support IFRAMES.<br>Womp womp</h1></iframe>
+        <button onclick="FullScreenToggle()">Fullscreen Mode</button>
+        <input type="text" id="URLin" placeholder="URL goes in here!" class="URLClass">
+        <br>
+        <button onclick="doTheThing()">Click to Activate!</button>
+        
+        <script>
+            var URLinElement = document.getElementById("URLin");
+            var frameElement = document.getElementById("frame");
+            function doTheThing() {
+                frameElement.setAttribute("src",URLinElement.value.concat("/embed"));
+            }
+            function FullScreenToggle() {
+                frameElement.setAttribute();
+            }
+        </script>
+    </body>
+</html>
